@@ -13,6 +13,8 @@ import './index.css'
 import HomePage from './pages/Homepage'
 import ProductPage from './pages/ProductPage';
 
+axios.defaults.baseURL =
+process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : '/'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
