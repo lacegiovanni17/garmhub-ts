@@ -1,7 +1,15 @@
+import { useContext, useEffect } from "react";
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
+import { Store } from "./Store";
 
 function App() {
+  const { state: { mode }, dispatch, } = useContext(Store);
+
+  useEffect(() => {
+    document.body.setAttribute('data-bs-theme', mode)
+  }, [mode])
+  
   return (
     <div className="d-flex flex-column vh-100">
       <header>
@@ -20,7 +28,7 @@ function App() {
         </Navbar>
       </header>
       <main>
-        <Container className='mt-3'>
+        <Container className="mt-3">
           <Outlet />
         </Container>
       </main>
