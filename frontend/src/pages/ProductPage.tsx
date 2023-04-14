@@ -21,7 +21,7 @@ export default function ProductPage() {
   } = useGetProductDetailsBySlugQuery(slug!)
 
   const { state, dispatch } = useContext(Store)
-  const { cart } = state
+  // const { cart } = state
 
   const navigate = useNavigate()
 
@@ -33,7 +33,7 @@ export default function ProductPage() {
       return
     }
     dispatch({
-      type: 'CART_ADD_ITEM',
+      // type: 'CART_ADD_ITEM',
       payload: { ...convertProductToCartItem(product!), quantity },
     })
     toast.success('Product added to the cart')

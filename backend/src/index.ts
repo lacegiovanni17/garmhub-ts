@@ -1,6 +1,21 @@
 import cors from 'cors'
+import dotenv from 'dotenv'
 import express, { Request, Response } from 'express'
 import { sampleProducts } from './data'
+
+dotenv.config()
+
+const MONGODB_URI = 
+    process.env.MONGODB_URI || 'mongodb://localhost/garmhubdb'
+mongoose.set('strictQuery', true)
+mongoose
+    .connect(MONGODB_URI)
+    .then(() => {
+        console.log('connected to mongodb')
+    })
+    .catch(() => {
+        console.log('error connecting to mongodb')
+    })
 
 const app = express()
 
