@@ -35,4 +35,4 @@ export class Product {
   public numReviews!: number;
 }
 
-export const ProductModel = getModelForClass(Product) 
+export const ProductModel = getModelForClass(Product)
