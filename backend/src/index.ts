@@ -2,10 +2,11 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import express, { Request, Response } from 'express'
 import { sampleProducts } from './data'
+import mongoose from 'mongoose'
 
 dotenv.config()
 
-const MONGODB_URI = 
+const MONGODB_URI =
     process.env.MONGODB_URI || 'mongodb://localhost/garmhubdb'
 mongoose.set('strictQuery', true)
 mongoose
@@ -25,7 +26,7 @@ app.use(
         origin: 'http://localhost:5173',
     })
 )
- 
+
 app.get('/api/products', (req: Request, res: Response) => {
     res.json(sampleProducts)
 })
