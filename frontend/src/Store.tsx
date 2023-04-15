@@ -1,17 +1,33 @@
 import React from 'react'
 
 type AppState = {
-  mode: string;
+    mode: string
+    cart: Cart
 };
 
 const initialState: AppState = {
-  mode: localStorage.getItem("mode")
-    ? localStorage.getItem("mode")!
-    : window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light",
-};
+    mode: localStorage.getItem("mode")
+        ? localStorage.getItem("mode")!
+        : window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light",
+    cart: {
+        cartItems: localStorage.getItem('cartItems')
+            ? JSON.parse(localStorage.getItem('cartItems')!)
+        : [],
+        shippingAddress: localStorage.getItem('shippingAddress')
+            ? JSON.parse(localStorage.getItem('shippingAddress')!)
+        : {},
+        paymentMethod: localStorage.getItem('paymentMethod')
+            ? JSON.parse(localStorage.getItem('paymentMethod')!)
+        : 'PayPal',
+        itemsPrice: 0,
+        shippingPrice: 0,
+        taxPrice: 0,
+        totalPrice: 0
+    },
+}
 
 type Action = { type: 'SWITCH_MODE' }
 
