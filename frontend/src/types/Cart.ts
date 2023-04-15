@@ -15,3 +15,13 @@ export type ShippingAddress = {
     country: string
     postalCode: string
 }
+
+export type Cart = {
+    itemsPrice: number
+    shippingPrice: number
+    taxPrice: number
+    totalPrice: number
+    cartItems: CartItem[]
+    shippingAddress: ShippingAddress
+    paymentMethod: string
+}
