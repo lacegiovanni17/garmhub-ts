@@ -13,7 +13,7 @@
 
 
 ## Technologies Used
-* Vite
+* ViteJS
 * ReactJS
 * Typescript
 * MongoDB
