@@ -23,7 +23,7 @@
 
 
 ## Introduction 
-This is a website mad
+This is a website made
 
 
 ## Author
