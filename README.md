@@ -23,7 +23,7 @@
 
 
 ## Introduction 
-This is a websit
+This is a website
 
 
 ## Author
