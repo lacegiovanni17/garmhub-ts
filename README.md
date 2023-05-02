@@ -23,7 +23,7 @@
 
 
 ## Introduction 
-This is a website made with vi
+This is a website made with vit
 
 
 ## Author
