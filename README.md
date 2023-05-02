@@ -23,7 +23,7 @@
 
 
 ## Introduction 
-This is a website made with vite
+This is a website made with Vite, R
 
 
 ## Author
