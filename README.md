@@ -23,7 +23,7 @@
 
 
 ## Introduction 
-This is a website made with Vite, ReactJS, B
+This is a website made with Vite, ReactJS, Bo
 
 
 ## Author
