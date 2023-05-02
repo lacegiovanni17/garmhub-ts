@@ -23,7 +23,7 @@
 
 
 ## Introduction 
-This is a website made wit
+This is a website made with
 
 
 ## Author
